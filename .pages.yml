@@ -41,3 +41,24 @@ content:
         label: Gallery photos
         type: image
         list: true
+  - name: products
+    label: Products
+    type: file
+    path: content/products.json
+    format: json
+    list: true
+    fields:
+      - { name: name, label: Product name, type: string, required: true }
+      - name: category
+        label: Category
+        type: select
+        options:
+          values: [Wood Shelves, Jewelry, Pins & Accessories, Curious Finds]
+      - { name: price, label: Price in dollars, type: number }
+      - { name: description, label: Product description, type: text }
+      - { name: photo, label: Main product photo, type: image }
+      - name: photos
+        label: Additional photos
+        type: image
+        list: true
+      - { name: available, label: Available for purchase, type: boolean, default: true }
