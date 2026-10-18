@@ -1,0 +1,64 @@
+media:
+  input: assets
+  output: /assets
+  rename: safe
+  categories: [image]
+content:
+  - name: homepage
+    label: Homepage and Story
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - { name: eyebrow, label: Small headline, type: string }
+      - { name: headline, label: Main headline, type: string }
+      - { name: intro, label: Homepage introduction, type: text }
+      - { name: collectionHeading, label: Collections heading, type: string }
+      - { name: collectionIntro, label: Collections introduction, type: text }
+      - { name: shelfHeading, label: Shelves heading, type: string }
+      - { name: shelfDescription, label: Shelves description, type: text }
+      - { name: storyHeading, label: Our story heading, type: string }
+      - { name: story, label: Our story, type: text }
+      - { name: contactHeading, label: Contact heading, type: string }
+      - { name: contactText, label: Contact text, type: text }
+      - { name: contactNote, label: Contact note, type: string }
+      - { name: facebook, label: Facebook page URL, type: string }
+      - { name: logo, label: Main logo, type: image }
+      - { name: shelfImage, label: Shelf feature photo, type: image }
+  - name: collections
+    label: Merchandise Galleries
+    type: file
+    path: content/collections.json
+    format: json
+    list: true
+    fields:
+      - { name: title, label: Collection name, type: string, required: true }
+      - { name: subtitle, label: Small category label, type: string }
+      - { name: description, label: Description, type: text }
+      - { name: image, label: Main photo, type: image }
+      - { name: status, label: Short label, type: string }
+      - name: photos
+        label: Gallery photos
+        type: image
+        list: true
+  - name: products
+    label: Products
+    type: file
+    path: content/products.json
+    format: json
+    list: true
+    fields:
+      - { name: name, label: Product name, type: string, required: true }
+      - name: category
+        label: Category
+        type: select
+        options:
+          values: [Wood Shelves, Jewelry, Pins & Accessories, Curious Finds]
+      - { name: price, label: Price in dollars, type: number }
+      - { name: description, label: Product description, type: text }
+      - { name: photo, label: Main product photo, type: image }
+      - name: photos
+        label: Additional photos
+        type: image
+        list: true
+      - { name: available, label: Available for purchase, type: boolean, default: true }
