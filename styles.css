@@ -3,3 +3,20 @@
 .gallery-thumbs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:0 24px 24px}
 .gallery-thumbs img{width:100%;height:112px;object-fit:cover;border:1px solid #8e754c50;border-radius:2px}
 @media(max-width:600px){.gallery-thumbs img{height:85px}}
+
+/* Product cards appear only after products are added in Pages CMS. */
+.products-wrap{margin-top:72px}.products-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(36px,4vw,52px);font-weight:500;text-align:center;margin:0 0 28px;color:#e8ddc8}
+.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.product-card{background:#23231e;border:1px solid #8e754c50;overflow:hidden}
+.product-card>img{display:block;width:100%;height:240px;object-fit:cover}
+.product-info{padding:22px}
+.product-category{color:#b99561;font-size:10px;text-transform:uppercase;letter-spacing:.15em}
+.product-info h4{font-family:'Cormorant Garamond',Georgia,serif;font-size:30px;font-weight:500;line-height:1.1;margin:10px 0}
+.product-info p{color:#c3b9aa;margin:0 0 12px}
+.product-price{display:block;color:#dfbd85;font-size:18px;margin:10px 0}
+.product-status{color:#b2aa9b;font-size:11px;margin:12px 0}
+.product-link{display:inline-block;color:#d7b57c;text-transform:uppercase;letter-spacing:.1em;font-size:10px;font-weight:700}
+.product-photos{display:flex;gap:8px;margin-top:16px;overflow-x:auto}
+.product-photos img{height:75px;width:75px;object-fit:cover;flex:none}
+@media(max-width:900px){.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.product-grid{grid-template-columns:1fr}.products-wrap{margin-top:50px}}
