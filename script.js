@@ -60,3 +60,46 @@ async function loadContent(){
  }catch(err){console.warn('Using original website content:',err)}
 }
 loadContent();
+
+/* Individual merchandise cards. An empty catalog leaves the original layout unchanged. */
+async function loadProducts(){
+ try {
+  const response=await fetch('content/products.json');
+  if(!response.ok)return;
+  const products=await response.json();
+  if(!Array.isArray(products)||!products.length)return;
+  const section=document.querySelector('#collections');
+  if(!section)return;
+  const wrap=document.createElement('div');wrap.className='products-wrap';
+  const title=document.createElement('h3');title.className='products-title';title.textContent='Available Treasures';
+  const grid=document.createElement('div');grid.className='product-grid';
+  products.forEach(product=>{
+   if(!product.name)return;
+   const card=document.createElement('article');card.className='product-card';
+   if(product.photo){const img=document.createElement('img');img.src=product.photo;img.alt=product.name;img.loading='lazy';card.appendChild(img);}
+   const info=document.createElement('div');info.className='product-info';
+   const category=document.createElement('span');category.className='product-category';category.textContent=product.category||'THE COLLECTION';
+   const name=document.createElement('h4');name.textContent=product.name;
+   const desc=document.createElement('p');desc.textContent=product.description||'';
+   info.append(category,name,desc);
+   if(product.price!==undefined&&product.price!==null&&product.price!==''){
+    const price=document.createElement('strong');price.className='product-price';price.textContent='$'+Number(product.price).toFixed(2);info.appendChild(price);
+   }
+   const status=document.createElement('div');status.className='product-status';status.textContent=product.available===false?'Currently unavailable':'Message us on Facebook to order';
+   info.appendChild(status);
+   if(product.available!==false){
+    const link=document.createElement('a');link.className='product-link';link.target='_blank';link.rel='noopener';
+    link.href=(document.querySelector('.facebook-link')?.href)||'https://www.facebook.com/';
+    link.textContent='Ask about this item ↗';info.appendChild(link);
+   }
+   if(Array.isArray(product.photos)&&product.photos.length){
+    const photos=document.createElement('div');photos.className='product-photos';
+    product.photos.filter(Boolean).forEach(src=>{const image=document.createElement('img');image.src=src;image.loading='lazy';image.alt=product.name+' additional photo';photos.appendChild(image);});
+    info.appendChild(photos);
+   }
+   card.appendChild(info);grid.appendChild(card);
+  });
+  if(grid.childElementCount){wrap.append(title,grid);section.appendChild(wrap);}
+ }catch(error){console.warn('Product catalog unavailable:',error);}
+}
+loadProducts();
