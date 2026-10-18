@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Wood Shelves",
+    "subtitle": "01 / HANDCRAFTED",
+    "description": "Solid pine, rustic character, and a place for your favorite things.",
+    "image": "/assets/shelves.jpg",
+    "status": "Explore shelves →",
+    "photos": []
+  },
+  {
+    "title": "Jewelry",
+    "subtitle": "02 / LITTLE TREASURES",
+    "description": "Earrings, necklaces, and beautiful little things.",
+    "image": "",
+    "status": "Gallery coming soon",
+    "photos": []
+  },
+  {
+    "title": "Pins & Accessories",
+    "subtitle": "03 / PERSONALITY PIECES",
+    "description": "For backpacks, lanyards, jackets, and wherever you please.",
+    "image": "",
+    "status": "Gallery coming soon",
+    "photos": []
+  },
+  {
+    "title": "Curious Finds",
+    "subtitle": "04 / FOUND & GATHERED",
+    "description": "Whatever peculiar or lovely treasures we happen upon.",
+    "image": "/assets/curiosities.jpg",
+    "status": "Inspirational display · products coming soon",
+    "photos": []
+  }
+]
