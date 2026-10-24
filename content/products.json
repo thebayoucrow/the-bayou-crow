@@ -6,5 +6,16 @@
     "description": "4 foot long, 1.5\" thick and 9.25\" deep shelf in a dark wood stain. No shelving hardware or floating shelf holes included",
     "photo": "/assets/img2328edited-smaller-1.jpg",
     "available": false
+  },
+  {
+    "name": "Unique Tees",
+    "category": "Curious Finds",
+    "price": 30,
+    "description": "Unique t shirts, inspired by anime and culture; Mostly XL size, contact for additional sizes which may take an extended lead time.",
+    "photo": "/assets/red-jester-tee-streetwear-portrait-4.png",
+    "photos": [
+      "/assets/vintage-charcoal-tee-with-armored-knight-2.png"
+    ],
+    "available": true
   }
 ]
