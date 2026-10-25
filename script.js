@@ -92,7 +92,7 @@ async function loadProducts(){
     link.href=(document.querySelector('.facebook-link')?.href)||'https://www.facebook.com/';
     link.textContent='Ask about this item ↗';info.appendChild(link);
    }
-   const view=document.createElement('span');view.className='product-view';view.textContent='View photos & details →';info.appendChild(view);
+   const view=document.createElement('span');view.className='product-view';view.textContent='VIEW ALL PHOTOS ↗';info.appendChild(view);
    card.addEventListener('click',event=>{if(event.target.closest('a'))return;openProduct(product)});
    card.addEventListener('keydown',event=>{if(event.target.closest('a'))return;if(event.key==='Enter'||event.key===' '){event.preventDefault();openProduct(product)}});
    card.appendChild(info);grid.appendChild(card);
