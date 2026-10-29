@@ -21,5 +21,23 @@
       "/assets/rooftop-lean-in-a-charcoal-graphic-tee-2.png"
     ],
     "available": true
+  },
+  {
+    "name": "Louisiana Bayou Products",
+    "category": "Jewelry",
+    "description": "Made in the swamps of Louisiana, all of these products are locally created and ethically sourced to ensure no part of the animal goes to waste. When you buy these products, you're supporting a local Louisiana family business. ",
+    "photo": "/assets/2026-10-280001.jpg",
+    "photos": [
+      "/assets/img2394edited.jpg",
+      "/assets/2026-10-280002.jpg",
+      "/assets/2026-10-280003.jpg",
+      "/assets/2026-10-280004.jpg",
+      "/assets/2026-10-280005.jpg",
+      "/assets/2026-10-280006.jpg",
+      "/assets/2026-10-280007.jpg",
+      "/assets/2026-10-280008.jpg",
+      "/assets/2026-10-280009.jpg"
+    ],
+    "available": true
   }
 ]
